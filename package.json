@@ -1,0 +1,26 @@
+{
+  "name": "testing-course",
+  "version": "1.0.0",
+  "description": "Epam Automation testing course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KseniyaParfianovich/testing-course.git"
+  },
+  "keywords": [
+    "testing",
+    "JS"
+  ],
+  "author": "Kseniya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KseniyaParfianovich/testing-course/issues"
+  },
+  "homepage": "https://github.com/KseniyaParfianovich/testing-course#readme",
+  "devDependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}
