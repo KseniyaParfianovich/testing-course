@@ -28,9 +28,7 @@ describe("Bring It On", () => {
     const codeSecondLine =
       'git reset $ (git commit-tree HEAD ^ {tree} -m "Legacy code")';
     const codeThirdLine = "git push origin master --force";
-    const code = `${codeFirstLine}
-      ${codeSecondLine}
-      ${codeThirdLine}`;
+    const code = `${codeFirstLine} \n${codeSecondLine} \n${codeThirdLine}`;
     const format = "Bash";
     const expiration = "10 Minutes";
    
