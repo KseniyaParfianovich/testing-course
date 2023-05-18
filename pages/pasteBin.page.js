@@ -16,9 +16,6 @@ class PastebinPage {
   get expirationDropdown() {
     return $("#select2-postform-expiration-container");
   }
-  get dropdownOptions() {
-    return $$(".select2-results__options>li");
-  }
   get pasteName() {
     return $("#postform-name");
   }
@@ -45,10 +42,12 @@ class PastebinPage {
   }
 
   async checkPasteSettings(settings) {
-    for await (const [dropdown, option] of settings) {
+    for (const [dropdown, option] of settings) {
       await dropdown.scrollIntoView({ block: "nearest" });
       await dropdown.click();
-      await this.dropdownOptions.find((el) => el.getText(option)).click();
+
+      const optionBtn = await $(`.select2-results__option=${option}`);
+      await optionBtn.click();
     }
   }
 

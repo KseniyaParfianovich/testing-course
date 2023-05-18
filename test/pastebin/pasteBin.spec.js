@@ -16,7 +16,7 @@ describe("I Can Win", () => {
     await pastebinPage.submitNewPaste();
 
     //Assert
-    expect(browser).toHaveTitle(title);
+    await expect(browser).toHaveTitleContaining(title);
   });
 });
 
@@ -28,31 +28,28 @@ describe("Bring It On", () => {
     const codeSecondLine =
       'git reset $ (git commit-tree HEAD ^ {tree} -m "Legacy code")';
     const codeThirdLine = "git push origin master --force";
-    const code = `
-      ${codeFirstLine}
+    const code = `${codeFirstLine}
       ${codeSecondLine}
-      ${codeThirdLine}
-    `;
+      ${codeThirdLine}`;
     const format = "Bash";
     const expiration = "10 Minutes";
-    const js = "JavaScript";
-
+   
     //Act
     await pastebinPage.open();
     await pastebinPage.createNewPaste(code, title);
     await pastebinPage.checkPasteSettings([
-      [pastebinPage.codeFormatDropdown, js],
+      [pastebinPage.codeFormatDropdown, format],
       [pastebinPage.expirationDropdown, expiration],
     ]);
     await pastebinPage.submitNewPaste();
 
     //Assert
-    expect(browser).toHaveTitle(title);
-    expect(pastebinPage.codeSourse).toHaveElementClassContaining(format);
-    expect(pastebinPage.codeMatch).toHaveTextContaining([
+    await expect(browser).toHaveTitleContaining(title);
+    await expect(pastebinPage.codeSourse).toHaveElementClass(format.toLocaleLowerCase());
+    await expect(pastebinPage.codeMatch).toHaveTextContaining(
       codeFirstLine,
       codeSecondLine,
       codeThirdLine,
-    ]);
+    );
   });
 });
