@@ -12,7 +12,7 @@ class CalculatorFormComponent extends BaseComponent {
     return this.rootEl.$("md-checkbox").selectByAttribute('area-label', 'Add GPUs');
   }
   get addToEstimateBtn() {
-    return this.rootEl.$('//div[normalize-space(text())="Add to Estimate"]');
+    return this.rootEl.$$('//button[normalize-space(text())="Add to Estimate"]')[0];
   }
 
   input(label) {

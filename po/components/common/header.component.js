@@ -12,6 +12,10 @@ class HeaderComponent extends BaseComponent {
   get searchField() {
     return this.rootEl.$(".devsite-search-field");
   }
+
+  get searchResultBtn() {
+    return this.rootEl.$(".devsite-suggest-all-results");
+  }
 }
 
 module.exports = HeaderComponent;
