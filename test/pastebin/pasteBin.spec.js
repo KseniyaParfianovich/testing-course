@@ -1,4 +1,4 @@
-const pastebinPage = require("../../pages/pasteBin.page");
+const pastebinPage = require("../../po/pages/pasteBin/pasteBin.page");
 
 describe("I Can Win", () => {
   it("should create a new paste with the provided details", async () => {
