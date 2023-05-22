@@ -6,10 +6,10 @@ class CalculatorFormComponent extends BaseComponent {
   }
 
   get computeEngineBtn() {
-    return this.rootEl.$(".compute").selectByAttribute('title', 'Compute Engine');
+    return this.rootEl.$("#tab-item-1");
   }
   get addGPUBtn() {
-    return this.rootEl.$("md-checkbox").selectByAttribute('area-label', 'Add GPUs');
+    return this.rootEl.$$("//md-checkbox [@aria-label='Add GPUs']")[0];
   }
   get addToEstimateBtn() {
     return this.rootEl.$$('//button[normalize-space(text())="Add to Estimate"]')[0];
