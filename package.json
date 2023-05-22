@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "pastebin": "wdio run ./wdio.conf.js --suite pastebin",
+    "calculator": "wdio run ./wdio.conf.js --suite calculator"
   },
   "repository": {
     "type": "git",

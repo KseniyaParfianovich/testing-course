@@ -26,6 +26,14 @@ exports.config = {
     "./test/**/*.js",
     // ToDo: define location for spec files here
   ],
+  suites: {
+    pastebin: [
+      "./test/pastebin/pasteBin.spec.js"
+    ],
+    calculator: [
+      "./test/cloudCalculator/cloudCalculator.spec.js"
+    ]
+  },
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'

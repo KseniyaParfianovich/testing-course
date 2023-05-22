@@ -1,4 +1,4 @@
-const page = require("../../po/pages");
+const { page } = require("../../po/pages");
 
 describe("Hurt Me Plenty", () => {
   it("should make a search by keyword", async () => {
