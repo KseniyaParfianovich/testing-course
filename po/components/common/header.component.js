@@ -6,7 +6,7 @@ class HeaderComponent extends BaseComponent {
   }
 
   get searchBtn() {
-    return this.rootEl.$(".devsite-search-button");
+    return this.rootEl.$("// button [@aria-label='Open search']");
   }
 
   get searchField() {
