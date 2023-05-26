@@ -3,7 +3,8 @@ class BasePage {
     this.url = url;
   }
 
-  open() {
+  async open() {
+    await browser.maximizeWindow();
     return browser.url(this.url);
   }
 }
