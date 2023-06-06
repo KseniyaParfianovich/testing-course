@@ -26,6 +26,14 @@ exports.config = {
     "./test/**/*.js",
     // ToDo: define location for spec files here
   ],
+  suites: {
+    pastebin: [
+      "./test/pastebin/pasteBin.spec.js"
+    ],
+    calculator: [
+      "./test/cloudCalculator/cloudCalculator.spec.js"
+    ]
+  },
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -127,7 +135,7 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ["spec"],
+  reporters: ["dot", "spec"],
 
   //
   // Options to be passed to Mocha.
