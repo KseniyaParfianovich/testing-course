@@ -5,8 +5,12 @@ class SearchCatalogComponent extends BaseComponent {
     super("devsite-catalog");
   }
 
-  searchResultLink(keyword) {
-    return this.rootEl.$(`b=${keyword}`).parentElement();
+  get firstSearchResult() {
+    return this.rootEl.$(".gsc-result:first-child a");
+  }
+
+  async searchResultLink() {
+    await this.firstSearchResult.click();
   }
 }
 

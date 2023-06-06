@@ -13,7 +13,7 @@ function page(name) {
     calculator: new CalculatorPage()
   };
 
-  return items[name.toLocaleLowerCase()];
+  return items[name];
 }
 
 module.exports = {
